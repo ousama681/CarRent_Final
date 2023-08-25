@@ -50,6 +50,7 @@ namespace CarRent.CustomerManagement.Api
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
+            //sfsfsfsfsfsfsf
         }
     }
 }
