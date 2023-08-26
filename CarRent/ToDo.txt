@@ -1,0 +1,10 @@
+- cedric Fragen bezügliuch 4 + 1 Views
+- cedric fragen wegen Qualitätsbaum
+- Metrikdefinition erstellen
+
+
+Todo Tomorrow:
+- Sonarqube zum laufen bringen und Automatischer Build und testen, Automatische Messung der Metriken
+- Die eigentliche Software programmieren.
+- Unittests erstellen
+- Teststrageie erstellen
