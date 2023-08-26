@@ -4,9 +4,9 @@ namespace CarRent.CarManagement.Api.Models
 {
     public record CarRequest
    (
-        Guid Id,
-        CarClass CarClass,
-        Brand Brand,
-        Model Model
+        string ModelName,
+        string BrandName,
+        string CarClassName,
+        int DailyCost
     );
 }

@@ -2,7 +2,7 @@
 {
     public record CustomerResponse(
         Guid Id,
-        string CustomerNr,
+        long CustomerNr,
         string Name,
         string? Address
     );

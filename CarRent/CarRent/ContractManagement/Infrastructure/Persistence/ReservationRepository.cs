@@ -11,27 +11,30 @@ namespace CarRent.ContractManagement.Infrastructure.Persistence
         private readonly RentContractContext _context;
         public void Add(Reservation reservation)
         {
-            throw new NotImplementedException();
+            _context.Add(reservation);
+            _context.SaveChanges();
         }
 
         public Reservation Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.Reservations.Where(r => r.Id.Equals(id)).SingleOrDefault();
+
         }
 
         public IEnumerable<Reservation> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Reservations.ToList();
         }
 
         public void Remove(Reservation reservation)
         {
-            throw new NotImplementedException();
+            _context.Reservations.Remove(reservation);
         }
 
         public void Remove(Guid id)
         {
-            throw new NotImplementedException();
+            Reservation reservation = _context.Reservations.Where(r => r.Id.Equals(id)).SingleOrDefault();
+            Remove(reservation);
         }
     }
 }

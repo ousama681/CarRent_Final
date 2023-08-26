@@ -6,7 +6,7 @@ namespace CarRent.CustomerManagement.Domain
     {
         public Guid Id { get; set; }
 
-        public string CustomerNr { get; set; }
+        public long CustomerNr { get; set; }
 
         public string Name { get; set; }
 

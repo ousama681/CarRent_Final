@@ -8,29 +8,29 @@ namespace CarRent.CarManagement.Infrastructure.Persistence
     {
         private readonly List<RentContract> _rentContracts;
         private readonly RentContractContext _context;
-        public void Add(RentContract car)
+        public void Add(RentContract rentContract)
         {
-            throw new NotImplementedException();
+            _context.RentContracts.Add(rentContract);
         }
 
         public RentContract Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.RentContracts.Where(r => r.Id.Equals(id)).SingleOrDefault(); ;
         }
 
         public IEnumerable<RentContract> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.RentContracts.ToList();
         }
 
-        public void Remove(RentContract car)
+        public void Remove(RentContract rentContract)
         {
-            throw new NotImplementedException();
+            _context.Remove(rentContract);
         }
 
         public void Remove(Guid id)
         {
-            throw new NotImplementedException();
-        }
+            RentContract rentContract = _context.RentContracts.Where(r => r.Id.Equals(id)).SingleOrDefault();
+            _context.RentContracts.Remove(rentContract);        }
     }
 }

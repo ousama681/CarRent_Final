@@ -22,7 +22,7 @@ namespace CarRent.CustomerManagement.Api
         public IEnumerable<CustomerResponse> Get()
         {
             var customers = _repository.GetAll();
-            return customers.Select(x => new CustomerResponse(x.Id, x.CustomerNr, x.Name, null));
+            return customers.Select(x => new CustomerResponse(x.Id, x.CustomerNr, x.Name, x.Address));
         }
 
         // GET api/<CustomerController>/5
@@ -32,11 +32,20 @@ namespace CarRent.CustomerManagement.Api
             return null;
         }
 
+        // GET api/<CustomerController>/5
+        [HttpGet("{Customername, Address}")]
+        public Guid Get([FromBody] CustomerRequest customerRequest)
+        {
+            List<Customer> customers = _repository.GetAll().ToList();
+            return customers.Where(c => c.Name.Equals(customerRequest.Name) && c.Address.Equals(customerRequest.Address)).Select(c => c.Id).SingleOrDefault();
+        }
+
         // POST api/<CustomerController>
         [HttpPost]
         public CustomerResponse Post([FromBody] CustomerRequest value)
         {
-            return null;
+            Customer customer = new Customer() { Name = value.Name, Address = value.Address, CustomerNr = _repository.GetNextCustomerNr()};
+            return _repository.Add();
         }
 
         // PUT api/<CustomerController>/5

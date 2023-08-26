@@ -38,7 +38,38 @@ namespace CarRent.CarManagement.Api
         [HttpPost]
         public CarResponse Post([FromBody] CarRequest value)
         {
-            return null;
+            bool isCarClassExisting = _repository.IsCarClassExisting(value.CarClassName);
+
+            if (!isCarClassExisting)
+            {
+                _repository.AddCarClass(value.CarClassName, value.DailyCost);
+            }
+
+            CarClass carClass = _repository.GetCarClass(value.CarClassName, value.DailyCost);
+
+            bool isBrandExisting = _repository.IsBrandExisting(value.BrandName);
+
+            if (!isBrandExisting)
+            {
+                _repository.AddBrand(value.BrandName);
+            }
+
+            Brand brand = _repository.getBrand(value.BrandName);
+
+            bool isModelExisting = _repository.IsModelExisting(value.ModelName, value.BrandName);
+
+            if (!isModelExisting)
+            {
+                _repository.AddModel(value.ModelName, brand.Id, carClass.Id);
+            }
+
+            Model model = _repository.GetModel(value.ModelName, brand.Id);
+
+            var car = new Car() { Id = Guid.NewGuid(), Model = model };
+
+            _repository.Add(car);
+
+            return new CarResponse(car.Id, car.Model);
         }
 
         // PUT api/<CarController>/5

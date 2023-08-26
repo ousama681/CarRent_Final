@@ -21,28 +21,37 @@ namespace CarRent.CustomerManagement.Infrastructure.Persistence
         public void Add(Customer customer)
         {
             _context.Add(customer);
-
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
 
         public Customer Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.Customers.Where(c => c.Id.Equals(id)).SingleOrDefault();
         }
 
         public IEnumerable<Customer> GetAll()
         {
-            return _customers;
+            return _context.Customers.ToList();
+        }
+
+        public long GetNextCustomerNr()
+        {
+            return _context.Customers.Max(x => x.CustomerNr).SingleOrDefault()+1;
         }
 
         public void Remove(Customer customer)
         {
-            throw new NotImplementedException();
+            _context.Remove(customer);
+            _context.SaveChanges();
         }
 
         public void Remove(Guid id)
         {
-            throw new NotImplementedException();
+            Customer customer = _context.Customers.Where(c => c.Id.Equals(id)).SingleOrDefault();
+
+
+            _context.Customers.Remove(customer);
+            _context.SaveChanges();
         }
     }
 }

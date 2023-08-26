@@ -45,9 +45,9 @@ namespace CarRent.CarManagement.Infrastructure.Persistence
                 .OnDelete(DeleteBehavior.Cascade);
         }
 
-        public DbSet<Car> Cars { get; set; }
-        public DbSet<Brand> Brands { get; set; }
-        public DbSet<Model> Models { get; set; }
-        public DbSet<CarClass> CarClasses { get; set; }
+        public DbSet<Car> Car { get; set; }
+        public DbSet<Brand> Brand { get; set; }
+        public DbSet<Model> Model { get; set; }
+        public DbSet<CarClass> CarClass { get; set; }
     }
 }

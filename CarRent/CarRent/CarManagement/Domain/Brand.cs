@@ -1,14 +1,12 @@
-﻿namespace CarRent.CarManagement.Domain
+﻿using System.Text.Json.Serialization;
+
+namespace CarRent.CarManagement.Domain
 {
     public class Brand
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        [JsonIgnore]
         public List<Model> Models { get; set; }
-
-        //public Brand(string name)
-        //{
-        //    Name = name;
-        //}
     }
 }
