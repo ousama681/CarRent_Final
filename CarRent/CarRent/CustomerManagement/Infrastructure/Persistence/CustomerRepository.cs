@@ -9,11 +9,11 @@ namespace CarRent.CustomerManagement.Infrastructure.Persistence
 
         public CustomerRepository(CustomerContext context)
         {
-            _customers = new List<Customer>()
-            {
-                new("C00001", "Hans"),
-                new("C00002", "Fritz")
-            };
+            //_customers = new List<Customer>()
+            //{
+            //    new("C00001", "Hans", "Rosenackerstrasse 1, 9403, Goldach"),
+            //    new("C00002", "Fritz", "Rosenackerstrasse 1, 9403, Goldach")
+            //};
 
             _context = context;
         }
