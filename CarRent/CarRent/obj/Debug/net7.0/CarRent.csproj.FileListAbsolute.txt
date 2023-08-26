@@ -14,8 +14,6 @@ C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\Ca
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.AssemblyInfo.cs
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.csproj.CoreCompileInputs.cache
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.MvcApplicationPartsAssemblyInfo.cache
-C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.RazorAssemblyInfo.cache
-C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.RazorAssemblyInfo.cs
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\staticwebassets\msbuild.CarRent.Microsoft.AspNetCore.StaticWebAssets.props
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\staticwebassets\msbuild.build.CarRent.props
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.CarRent.props
@@ -23,12 +21,16 @@ C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\Ca
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\staticwebassets.pack.json
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\staticwebassets.build.json
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\staticwebassets.development.json
-C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\scopedcss\bundle\CarRent.styles.css
-C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\scopedcss\projectbundle\CarRent.bundle.scp.css
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.csproj.CopyComplete
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.dll
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\refint\CarRent.dll
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.pdb
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.genruntimeconfig.cache
 C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\ref\CarRent.dll
+C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\ZbwTechniker\4tSemester\SoftwarearchitekturUndDesign\CarRent_Final\CarRent\CarRent\obj\Debug\net7.0\CarRent.MvcApplicationPartsAssemblyInfo.cs

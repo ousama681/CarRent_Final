@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vIidFY6iivv9DBCQAeu3RDVljT9CydCOnghAI2QKbew=",
+  "Hash": "92LxEPdhsJzxxcT1N9o5vplwoVGxCZ9zKqJucRQRmRA=",
   "Source": "CarRent",
   "BasePath": "_content/CarRent",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\obj\\Debug\\net7.0\\scopedcss\\bundle\\CarRent.styles.css",
-      "SourceId": "CarRent",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/CarRent",
-      "RelativePath": "CarRent.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\obj\\Debug\\net7.0\\scopedcss\\bundle\\CarRent.styles.css"
-    },
-    {
-      "Identity": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CarRent.bundle.scp.css",
-      "SourceId": "CarRent",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/CarRent",
-      "RelativePath": "CarRent.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CarRent.bundle.scp.css"
-    },
     {
       "Identity": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\wwwroot\\css\\site.css",
       "SourceId": "CarRent",

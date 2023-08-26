@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CarRent.bundle.scp.css",
-      "PackagePath": "staticwebassets\\CarRent.bundle.scp.css"
-    },
-    {
       "Id": "C:\\ZbwTechniker\\4tSemester\\SoftwarearchitekturUndDesign\\CarRent_Final\\CarRent\\CarRent\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
