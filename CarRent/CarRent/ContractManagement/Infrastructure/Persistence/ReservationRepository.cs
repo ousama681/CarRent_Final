@@ -1,4 +1,5 @@
 ﻿using CarRent.CarManagement.Infrastructure.Persistence;
+using CarRent.ContractManagement.Api.Models;
 using CarRent.ContractManagement.Domain;
 using CarRent.CustomerManagement.Domain;
 using CarRent.CustomerManagement.Infrastructure.Persistence;
@@ -13,6 +14,11 @@ namespace CarRent.ContractManagement.Infrastructure.Persistence
         {
             _context.Add(reservation);
             _context.SaveChanges();
+        }
+
+        public void Edit(Guid id, ReservationRequest value)
+        {
+            _context.Update(value);
         }
 
         public Reservation Get(Guid id)

@@ -1,6 +1,9 @@
-﻿using CarRent.CarManagement.Domain;
+﻿using CarRent.CarManagement.Api.Models;
+using CarRent.CarManagement.Domain;
 using CarRent.CustomerManagement.Domain;
 using CarRent.CustomerManagement.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Net.Http.Headers;
 using System.Security.Cryptography.Xml;
 
 namespace CarRent.CarManagement.Infrastructure.Persistence
@@ -23,22 +26,26 @@ namespace CarRent.CarManagement.Infrastructure.Persistence
 
         public Car Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.Car.Where(c => c.Id.Equals(id)).SingleOrDefault();
         }
 
         public IEnumerable<Car> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Car.Include(c=> c.Model).Include(c=> c.Model.Brand).Include(c=> c.Model.CarClass).ToList();
         }
 
         public void Remove(Car car)
         {
-            throw new NotImplementedException();
+            _context.Remove(car);
+            _context.SaveChanges();
         }
 
         public void Remove(Guid id)
         {
-            throw new NotImplementedException();
+            var car= _context.Car.Where(c => c.Id.Equals(id)).SingleOrDefault();
+
+            _context.Remove(car);
+            _context.SaveChanges();
         }
 
         public bool IsModelExisting(string modelName, string brandName)
@@ -114,6 +121,22 @@ namespace CarRent.CarManagement.Infrastructure.Persistence
         public Brand getBrand(string brandName)
         {
             return _context.Brand.Where(b => b.Name.Equals(brandName)).SingleOrDefault();
+        }
+
+        public void Edit(Guid id, CarRequest value)
+        {
+            var car = Get(id);
+
+           
+            car.ModelId = (Guid)value.Model.Id;
+
+            _context.Update(car);
+            _context.SaveChanges();
+        }
+
+        public CarResponse Get(string modelName, string brandName)
+        {
+            return _context.Car.Where(c => c.Model.Name.Equals(modelName) && c.Model.Brand.Name.Equals(brandName)).Select(c => new CarResponse(c.Id, c.Model)).SingleOrDefault();
         }
     }
 }

@@ -13,6 +13,12 @@ namespace CarRent.CarManagement.Infrastructure.Persistence
             _context.RentContracts.Add(rentContract);
         }
 
+        public void Edit(Guid id, RentContract r)
+        {
+            _context.Update(r);
+            _context.SaveChanges();
+        }
+
         public RentContract Get(Guid id)
         {
             return _context.RentContracts.Where(r => r.Id.Equals(id)).SingleOrDefault(); ;

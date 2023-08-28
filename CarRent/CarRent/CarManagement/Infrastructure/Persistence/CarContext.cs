@@ -14,6 +14,8 @@ namespace CarRent.CarManagement.Infrastructure.Persistence
         {
             base.OnModelCreating(modelBuilder);
 
+            
+
             modelBuilder.Entity<Car>()
                 .HasOne(c => c.Model)
                 .WithMany(m => m.Cars)

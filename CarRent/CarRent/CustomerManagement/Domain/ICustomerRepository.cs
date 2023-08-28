@@ -11,6 +11,9 @@
         void Remove(Customer customer);
 
         void Remove(Guid id);
+
+        void Edit(Customer customer);
+
         long GetNextCustomerNr();
     }
 }

@@ -1,4 +1,5 @@
-﻿using CarRent.CustomerManagement.Domain;
+﻿using CarRent.CarManagement.Api.Models;
+using CarRent.CustomerManagement.Domain;
 
 namespace CarRent.CarManagement.Domain
 {
@@ -23,5 +24,7 @@ namespace CarRent.CarManagement.Domain
         void AddCarClass(string carClassName, int dailyCost);
         CarClass GetCarClass(string carClassName, int dailyCost);
         Brand getBrand(string brandName);
+        void Edit(Guid id, CarRequest value);
+        CarResponse Get(string modelName, string brandName);
     }
 }

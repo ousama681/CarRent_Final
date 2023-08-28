@@ -1,6 +1,6 @@
 ﻿namespace CarRent.CarManagement.Api.Models
 {
     public record BrandRequest
-    (Guid Id,
+    (Guid? Id,
         string Name);
 }

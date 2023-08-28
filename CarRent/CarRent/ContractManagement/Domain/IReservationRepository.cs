@@ -1,4 +1,5 @@
 ﻿using CarRent.CarManagement.Domain;
+using CarRent.ContractManagement.Api.Models;
 
 namespace CarRent.ContractManagement.Domain
 {
@@ -13,5 +14,6 @@ namespace CarRent.ContractManagement.Domain
         void Remove(Reservation reservation);
 
         void Remove(Guid id);
+        void Edit(Guid id, ReservationRequest value);
     }
 }

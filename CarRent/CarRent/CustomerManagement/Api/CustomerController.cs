@@ -29,7 +29,8 @@ namespace CarRent.CustomerManagement.Api
         [HttpGet("{id}")]
         public CustomerResponse Get(Guid id)
         {
-            return null;
+            Customer c = _repository.Get(id);
+            return new CustomerResponse(c.Id, c.CustomerNr, c.Name, c.Address);
         }
 
         // GET api/<CustomerController>/5
@@ -44,14 +45,25 @@ namespace CarRent.CustomerManagement.Api
         [HttpPost]
         public CustomerResponse Post([FromBody] CustomerRequest value)
         {
-            Customer customer = new Customer() { Name = value.Name, Address = value.Address, CustomerNr = _repository.GetNextCustomerNr()};
-            return _repository.Add();
+            Customer customer = new Customer() {Id = Guid.NewGuid(), Name = value.Name, Address = value.Address, CustomerNr = _repository.GetNextCustomerNr()};
+            _repository.Add(customer);
+
+            Customer savedCustomer = _repository.Get(customer.Id);
+
+            return new CustomerResponse(savedCustomer.Id, savedCustomer.CustomerNr, savedCustomer.Name, savedCustomer.Address);
         }
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
         public CustomerResponse Put(Guid id, [FromBody] CustomerRequest value)
         {
+            Customer customer = _repository.Get(id);
+
+            customer.Address = value.Address;
+            customer.Name = value.Name;
+
+            _repository.Edit(customer);
+
             return null;
         }
 
@@ -59,7 +71,7 @@ namespace CarRent.CustomerManagement.Api
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            //sfsfsfsfsfsfsf
+            _repository.Remove(id);
         }
     }
 }

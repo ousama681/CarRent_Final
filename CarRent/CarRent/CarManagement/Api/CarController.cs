@@ -24,7 +24,8 @@ namespace CarRent.CarManagement.Api
         [HttpGet]
         public IEnumerable<CarResponse> Get()
         {
-            return null;
+            var cars = _repository.GetAll();
+            return cars.Select(c => new CarResponse(c.Id, c.Model));
         }
 
         // GET api/<CarController>/5
@@ -34,36 +35,43 @@ namespace CarRent.CarManagement.Api
             return null;
         }
 
+        // GET api/<CarController>/5
+        [HttpGet("{modelName, brandName}")]
+        public CarResponse Get(string modelName, string brandName)
+        {
+            return _repository.Get(modelName, brandName);
+        }
+
         // POST api/<CarController>
         [HttpPost]
         public CarResponse Post([FromBody] CarRequest value)
         {
-            bool isCarClassExisting = _repository.IsCarClassExisting(value.CarClassName);
+            bool isCarClassExisting = _repository.IsCarClassExisting(value.Model.CarClass.Name);
 
             if (!isCarClassExisting)
             {
-                _repository.AddCarClass(value.CarClassName, value.DailyCost);
+                _repository.AddCarClass(value.Model.CarClass.Name, value.Model.CarClass.DailyCost);
             }
 
-            CarClass carClass = _repository.GetCarClass(value.CarClassName, value.DailyCost);
+            CarClass carClass = _repository.GetCarClass(value.Model.CarClass.Name, value.Model.CarClass.DailyCost);
 
-            bool isBrandExisting = _repository.IsBrandExisting(value.BrandName);
+            bool isBrandExisting = _repository.IsBrandExisting(value.Model.Brand.Name);
 
             if (!isBrandExisting)
             {
-                _repository.AddBrand(value.BrandName);
+                _repository.AddBrand(value.Model.Brand.Name);
             }
 
-            Brand brand = _repository.getBrand(value.BrandName);
+            Brand brand = _repository.getBrand(value.Model.Brand.Name);
 
-            bool isModelExisting = _repository.IsModelExisting(value.ModelName, value.BrandName);
+            bool isModelExisting = _repository.IsModelExisting(value.Model.Name, value.Model.Brand.Name);
 
             if (!isModelExisting)
             {
-                _repository.AddModel(value.ModelName, brand.Id, carClass.Id);
+                _repository.AddModel(value.Model.Name, brand.Id, carClass.Id);
             }
 
-            Model model = _repository.GetModel(value.ModelName, brand.Id);
+            Model model = _repository.GetModel(value.Model.Name, brand.Id);
 
             var car = new Car() { Id = Guid.NewGuid(), Model = model };
 
@@ -74,9 +82,9 @@ namespace CarRent.CarManagement.Api
 
         // PUT api/<CarController>/5
         [HttpPut("{id}")]
-        public CarResponse Put(Guid id, [FromBody] CarRequest value)
+        public void Put(Guid id, [FromBody] CarRequest value)
         {
-            return null;
+            _repository.Edit(id, value);
         }
 
         // DELETE api/<CarController>/5

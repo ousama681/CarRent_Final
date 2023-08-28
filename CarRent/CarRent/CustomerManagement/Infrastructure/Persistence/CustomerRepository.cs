@@ -24,6 +24,12 @@ namespace CarRent.CustomerManagement.Infrastructure.Persistence
             _context.SaveChanges();
         }
 
+        public void Edit(Customer customer)
+        {
+            _context.Update(customer);
+            _context.SaveChanges();
+        }
+
         public Customer Get(Guid id)
         {
             return _context.Customers.Where(c => c.Id.Equals(id)).SingleOrDefault();
@@ -36,7 +42,7 @@ namespace CarRent.CustomerManagement.Infrastructure.Persistence
 
         public long GetNextCustomerNr()
         {
-            return _context.Customers.Max(x => x.CustomerNr).SingleOrDefault()+1;
+            return _context.Customers.Max(x => x.CustomerNr)+1;
         }
 
         public void Remove(Customer customer)
@@ -48,8 +54,6 @@ namespace CarRent.CustomerManagement.Infrastructure.Persistence
         public void Remove(Guid id)
         {
             Customer customer = _context.Customers.Where(c => c.Id.Equals(id)).SingleOrDefault();
-
-
             _context.Customers.Remove(customer);
             _context.SaveChanges();
         }

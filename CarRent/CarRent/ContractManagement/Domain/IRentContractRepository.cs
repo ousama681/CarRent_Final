@@ -11,5 +11,6 @@
         void Remove(RentContract rentContract);
 
         void Remove(Guid id);
+        void Edit(Guid id, RentContract r);
     }
 }
